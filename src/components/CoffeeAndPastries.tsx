@@ -1,6 +1,6 @@
 export default function CoffeeAndPastries() {
   return (
-    <section className="max-w-6xl mx-auto px-8 py-16">
+    <section className="max-w-6xl mx-auto px-8 py-20">
       <h2 className="text-4xl font-bold mb-6">
         Coffee & Fresh Pastries
       </h2>

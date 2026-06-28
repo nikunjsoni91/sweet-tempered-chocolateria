@@ -1,10 +1,20 @@
 import { business } from "@/data/business";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-8 py-20">
-      <div className="max-w-3xl">
-        <p className="uppercase tracking-widest mb-3">
+    <section
+      className="relative min-h-[80vh] flex items-center"
+      style={{
+        backgroundImage: "url('/images/hero.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      <div className="relative z-10 max-w-3xl mx-auto px-8 text-white">
+        <p className="uppercase tracking-[0.3em] mb-4">
           Brisbane • Australia
         </p>
 
@@ -12,18 +22,18 @@ export default function Hero() {
           {business.name}
         </h1>
 
-        <p className="text-xl mb-8">
+        <p className="text-xl md:text-2xl mb-8 max-w-2xl">
           {business.tagline}
         </p>
 
         <div className="flex gap-4">
-          <button className="border px-6 py-3 rounded">
+          <Link href="/menu" className="bg-white text-black px-6 py-3 rounded">
             View Menu
-          </button>
+          </Link>
 
-          <button className="border px-6 py-3 rounded">
+          <Link href="/contact" className="border border-white px-6 py-3 rounded">
             Visit Us
-          </button>
+          </Link>
         </div>
       </div>
     </section>
